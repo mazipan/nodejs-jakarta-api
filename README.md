@@ -16,6 +16,28 @@ Create instance
 
 ```js
 import JakGoAPI from 'nodejs-jakarta-api';
-
 const JakGoAPI = new JakGoAPI({ token: 'YOUR_TOKEN_HERE' });
 ```
+
+Create request
+
+```js
+const response = await JakGoAPI.getKota();
+```
+
+## Available Methods
+
+| Method Name 		  |  Description |
+|-------------------|--------------|
+| `getKota`  				|  Get Kota 	 |
+| `getKelurahan`  	|  Get Kelurahan |
+| `getKecamatan`  	|  Get Kecamatan |
+| `getRW`  					|  Get RW |
+
+## Credits
+
+- [api.jakarta.go.id](http://api.jakarta.go.id/)
+
+---
+
+Copyright © 2020 by Irfan Maulana
