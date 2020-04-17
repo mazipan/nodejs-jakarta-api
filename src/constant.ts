@@ -11,11 +11,11 @@ export const TPS = {
 }
 
 export const KESEHATAN = {
-	RSU: 'rumahsakitumum',
+	URL_RSU: 'rumahsakitumum',
 	URL_RSU_DETAIL: (id: string) => `rumahsakitumum/${id}`,
-	RSK: 'rumahsakitkhusus',
+	URL_RSK: 'rumahsakitkhusus',
 	URL_RSK_DETAIL: (id: string) => `rumahsakitkhusus/${id}`,
-	PUSKESMAS: 'puskesmas',
+	URL_PUSKESMAS: 'puskesmas',
 	URL_PUSKESMAS_DETAIL: (id: string) => `puskesmas/${id}`,
 }
 

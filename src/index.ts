@@ -1,5 +1,5 @@
 import createRequest from './api';
-import { WILAYAH } from './constant'
+import { WILAYAH, TPS, KESEHATAN, CCTV, EMERGENCY } from './constant'
 
 export default class JakGoAPI {
 	private static instance: JakGoAPI;
@@ -15,31 +15,120 @@ export default class JakGoAPI {
 		return JakGoAPI.instance;
 	}
 
-	public getKota(): Promise<any> {
-		return createRequest({
+	/** WILAYAH */
+	public async getKota(): Promise<any> {
+		return await createRequest({
 			token: JakGoAPI.tokenPrivate,
 			url: WILAYAH.URL_KOTA
 		});
 	}
 
-	public getKelurahan(): Promise<any> {
-		return createRequest({
+	public async getKelurahan(): Promise<any> {
+		return await createRequest({
 			token: JakGoAPI.tokenPrivate,
 			url: WILAYAH.URL_KELURAHAN
 		});
 	}
 
-	public getKecamatan(): Promise<any> {
-		return createRequest({
+	public async getKecamatan(): Promise<any> {
+		return await createRequest({
 			token: JakGoAPI.tokenPrivate,
 			url: WILAYAH.URL_KECAMATAN
 		});
 	}
 
-	public getRW(): Promise<any> {
-		return createRequest({
+	public async getRW(): Promise<any> {
+		return await createRequest({
 			token: JakGoAPI.tokenPrivate,
 			url: WILAYAH.URL_RW
+		});
+	}
+
+	/** TPS */
+	public async getTPS(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: TPS.URL_TPS
+		});
+	}
+
+	/** KESEHATAN */
+	public async getRSU(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: KESEHATAN.URL_RSU
+		});
+	}
+
+	public async getRSK(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: KESEHATAN.URL_RSK
+		});
+	}
+
+	public async getPuskesmas(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: KESEHATAN.URL_PUSKESMAS
+		});
+	}
+
+	/** CCTV */
+	public async getCCTV(id: string): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: CCTV.URL_CCTVBALITOWER_DETAIL(id)
+		});
+	}
+
+	/** EMERGENCY */
+	public async getPosPemadam(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_POS_PEMADAM
+		});
+	}
+
+	public async getPetugasPemadam(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_PETUGAS_PEMADAM
+		});
+	}
+
+	public async getAmbulance(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_AMBULANCE
+		});
+	}
+
+	public async getPetugasDinkes(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_PETUGAS_DINKES
+		});
+	}
+
+	public async getPetugasSatpolPP(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_PETUGAS_SATPOLPP
+		});
+	}
+
+	public async getPosPolda(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_POSPOLDA
+		});
+	}
+
+	public async getPetugasDishub(): Promise<any> {
+		return await createRequest({
+			token: JakGoAPI.tokenPrivate,
+			url: EMERGENCY.URL_PETUGAS_DISHUB
 		});
 	}
 }
