@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-jakarta-api",
+  "version": "1.0.0",
+  "description": "Node.js wrapper for JakGo API (api.jakarta.go.id)",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle src/index.ts --name JakartaAPI",
+    "dev": "microbundle watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazipan/nodejs-jakarta-api.git"
+  },
+  "keywords": [
+    "api",
+    "api-wrapper",
+    "jakarta-api",
+    "jakgo-api",
+    "jakgo"
+  ],
+  "author": "Irfan Maulana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mazipan/nodejs-jakarta-api/issues"
+  },
+  "homepage": "https://github.com/mazipan/nodejs-jakarta-api#readme",
+  "dependencies": {
+    "memory-cache": "^0.2.0",
+    "microbundle": "^0.11.0",
+    "node-fetch": "^2.6.0"
+  }
+}
