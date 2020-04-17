@@ -1,7 +1,8 @@
 {
   "name": "nodejs-jakarta-api",
   "version": "1.0.0",
-  "description": "Node.js wrapper for JakGo API (api.jakarta.go.id)",
+	"description": "Node.js wrapper for JakGo API (api.jakarta.go.id)",
+	"private": false,
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
