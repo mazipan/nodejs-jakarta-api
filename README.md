@@ -10,6 +10,14 @@ Node.js wrapper for JakGo API (api.jakarta.go.id) with Memory Cache.
 + Login or register
 + Create new Apps
 
+## How to install
+
+```bash
+$ yarn add nodejs-jakarta-api node-fetch memory-cache
+# OR
+$ npm install nodejs-jakarta-api node-fetch memory-cache
+```
+
 ## How to use?
 
 Create instance

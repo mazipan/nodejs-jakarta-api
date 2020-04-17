@@ -1,6 +1,10 @@
 import createRequest from './api';
 import { WILAYAH, TPS, KESEHATAN, CCTV, EMERGENCY } from './constant'
 
+interface JakGoOptions {
+	token: string;
+}
+
 export default class JakGoAPI {
 	private static instance: JakGoAPI;
 	private static tokenPrivate: string;

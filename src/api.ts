@@ -3,6 +3,12 @@ import cache from 'memory-cache';
 
 const BASE_URL = 'http://api.jakarta.go.id/v1';
 
+interface CreateRequestParam {
+	token: string;
+	url: string;
+	page?: number;
+}
+
 export default async function createRequest({ token, url, page }: CreateRequestParam): Promise<any> {
 	const pageParam = page ? `&page=${page}` : '';
 	const completeUrl = `${BASE_URL}/${url}?format=geojson${pageParam}`;
